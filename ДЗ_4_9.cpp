@@ -4,7 +4,7 @@ using namespace std;
 
 int func_one(string number, int cc_one){
 	int num_dec, d, len_num;
-	// num_dec - полученное десятичное число, d - цифра на определенной позиции этого числа, len_num - длина числа
+	// num_dec - РїРѕР»СѓС‡РµРЅРЅРѕРµ РґРµСЃСЏС‚РёС‡РЅРѕРµ С‡РёСЃР»Рѕ, d - С†РёС„СЂР° РЅР° РѕРїСЂРµРґРµР»РµРЅРЅРѕР№ РїРѕР·РёС†РёРё СЌС‚РѕРіРѕ С‡РёСЃР»Р°, len_num - РґР»РёРЅР° С‡РёСЃР»Р°
 	len_num = number.length() - 1;
 	for (int i = 0; i < number.length(); i++){
 		d = ((int) number[len_num] - (int) '0');
@@ -18,7 +18,7 @@ int func_one(string number, int cc_one){
 string func_two(int num_dec, int cc_two){
 	char line[100], main_number[100];
 	int number = 25, cc = 3, n, m;
-	// n - запоминает кол-во символов в числе динамически, m - делает, как n, но статично
+	// n - Р·Р°РїРѕРјРёРЅР°РµС‚ РєРѕР»-РІРѕ СЃРёРјРІРѕР»РѕРІ РІ С‡РёСЃР»Рµ РґРёРЅР°РјРёС‡РµСЃРєРё, m - РґРµР»Р°РµС‚, РєР°Рє n, РЅРѕ СЃС‚Р°С‚РёС‡РЅРѕ
 	for (int i = 0; num_dec > 0; num_dec /= cc_two, i++){
 		line[i] = num_dec % cc_two + '0';
 		n = i;
@@ -37,12 +37,12 @@ int main(){
 	setlocale(LC_ALL, "Russian");
 	string number, number_two;
 	int cc_one, cc_two;
-	printf("Введите целое число: ");
+	printf("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ: ");
 	cin >> number;
-	printf("\nВведите СС этого числа: ");
+	printf("\nР’РІРµРґРёС‚Рµ РЎРЎ СЌС‚РѕРіРѕ С‡РёСЃР»Р°: ");
 	cin >> cc_one;
-	printf("\nВведите требуемую СС: ");
+	printf("\nР’РІРµРґРёС‚Рµ С‚СЂРµР±СѓРµРјСѓСЋ РЎРЎ: ");
 	cin >> cc_two;
-	cout<<func_two(func_one(number, cc_one), cc_two);
+	printf("РџРѕР»СѓС‡РµРЅРЅРѕРµ С‡РёСЃР»Рѕ: %s", func_two(func_one(number, cc_one), cc_two));
 	return 0;
 }
