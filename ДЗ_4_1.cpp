@@ -8,10 +8,10 @@ int main(){
 	ofstream new_file;
 	new_file.open("file_new.txt");
 	string line;
-	printf("Введите строку, состоящую из чисел: ");
+	printf("Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ, СЃРѕСЃС‚РѕСЏС‰СѓСЋ РёР· С‡РёСЃРµР»: ");
 	getline(cin, line);
 	new_file<<line;
-	printf("\nСтрока сохранена в текстовом файле, сейчас начнется суммирование\n");
+	printf("\nРЎС‚СЂРѕРєР° СЃРѕС…СЂР°РЅРµРЅР° РІ С‚РµРєСЃС‚РѕРІРѕРј С„Р°Р№Р»Рµ, СЃРµР№С‡Р°СЃ РЅР°С‡РЅРµС‚СЃСЏ СЃСѓРјРјРёСЂРѕРІР°РЅРёРµ\n");
 	new_file.close();
 	
 	ifstream file;
@@ -26,4 +26,5 @@ int main(){
 	}
 	}
 	cout<<sum<<endl;
+	file.close();
 }
