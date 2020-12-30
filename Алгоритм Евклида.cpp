@@ -6,10 +6,10 @@ using namespace std;
 
     for (int i = a; i > 0; i--) {
         if (a % i == 0 && b % i == 0) {
-			return i;
+	    return i;
         }
     }
-    return 0;
+    return 1;
 }
  
 int main() {
