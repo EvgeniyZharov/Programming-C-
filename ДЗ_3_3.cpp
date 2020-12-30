@@ -5,20 +5,20 @@ using namespace std;
 int main() 
 {  
    setlocale(LC_ALL, "Russian");
-   // создание текстового файла
+   // СЃРѕР·РґР°РЅРёРµ С‚РµРєСЃС‚РѕРІРѕРіРѕ С„Р°Р№Р»Р°
    ofstream new_file;
    new_file.open("text_file.txt");
-   printf("Введите текст для файла: ");
+   printf("Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚ РґР»СЏ С„Р°Р№Р»Р°: ");
    string line;
    getline(cin, line);
    cout << line;
    new_file<<line;
-   cout<<"\nТекствовый файл успешно записан"<< endl;
+   cout<<"\nРўРµРєСЃС‚РІРѕРІС‹Р№ С„Р°Р№Р» СѓСЃРїРµС€РЅРѕ Р·Р°РїРёСЃР°РЅ"<< endl;
    new_file.close();
    
    ifstream file;
    file.open("text_file.txt");
-   printf("Файл открыт\n");
+   printf("Р¤Р°Р№Р» РѕС‚РєСЂС‹С‚\n");
    string a;
    while (!file.eof())
    {
@@ -26,6 +26,6 @@ int main()
    	cout << a;
    }
    file.close();
-   printf("Файл закрыт.");
+   printf("Р¤Р°Р№Р» Р·Р°РєСЂС‹С‚.");
    return 0;
 }
